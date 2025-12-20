@@ -19,7 +19,7 @@
       line-height: 1.7;
     }
 
-    /* ===== HERO SECTION (MATCHING SAMPLE WEBSITE) ===== */
+    /* ===== HERO SECTION ===== */
     header {
       padding: 90px 20px 60px;
       text-align: center;
@@ -46,7 +46,7 @@
       color: #94a3b8;
     }
 
-    /* ===== NAVIGATION (Glass sticky nav like sample) ===== */
+    /* ===== NAVIGATION ===== */
     nav {
       position: sticky;
       top: 0;
@@ -101,7 +101,7 @@
       font-size: 2.2rem;
     }
 
-    /* ===== PROJECT CARDS (Clean modern grid) ===== */
+    /* ===== PROJECT CARDS ===== */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -168,7 +168,7 @@
     <p>Programmer</p>
   </header>
 
-  <!-- ========== NAVIGATION ========== -->
+  <!-- ========== NAV ========== -->
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -176,16 +176,16 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- ========== ABOUT SECTION ========== -->
+  <!-- ========== ABOUT ========== -->
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am a programmer who enjoys coding and do things that many people cannot believe
-      I am confident with my skills in this field and always trying to learning new things.
+      I am a programmer who enjoys coding and doing things many people cannot believe.
+      I am confident with my skills and always learning new technologies.
     </p>
   </section>
 
-  <!-- ========== PROJECTS SECTION (Matching Sample Layout) ========== -->
+  <!-- ========== PROJECTS ========== -->
   <section id="projects">
     <h2>Projects</h2>
 
@@ -201,7 +201,7 @@
       </div>
 
       <div class="card">
-        <h3>Gamartisans</h3>
+        <h3></h3>
         <p>Marketplace for handmade goods with charity integration.</p>
       </div>
     </div>
@@ -222,8 +222,11 @@
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <span style="color:#38bdf8">cabs.derrick20@gmail.com</span></p>
-    <p>GitHub: <a href="https://github.com/JoedellDerrickCaballes"
-        style="color:#38bdf8">github.com/JoedellDerrickCaballes</a></p>
+    <p>GitHub:
+      <a href="https://github.com/JoedellDerrickCaballes" style="color:#38bdf8">
+        github.com/JoedellDerrickCaballes
+      </a>
+    </p>
   </section>
 
   <!-- ========== FOOTER ========== -->
@@ -231,23 +234,24 @@
     © 2025 Joedell Derrick Caballes. All rights reserved.
   </footer>
 
-  <!-- ========== FLOWISE CHATBOT EMBED ========== -->
+  <!-- ========== FLOWISE CHATBOT (FINAL WORKING VERSION) ========== -->
   <script>
-    window.flowise = {
-      chatflowid: "YOUR_CHATFLOW_ID_HERE",
-      apiHost: "YOUR_FLOWISE_URL_HERE",
-      theme: {
-        chatWindow: {
-          title: "Joedell AI Assistant",
-          backgroundColor: "#0764f8ff",
-          botMessageBackground: "#2a77e2ff",
-          userMessageBackground: "#0f4a63ff",
-          textColor: "#ffffff"
-        }
+  window.chatbotConfig = {
+    chatflowid: "033c698f-5974-49f3-a3dd-727cc9a7b633",
+    apiHost: "https://cloud.flowiseai.com",
+    theme: {
+      chatWindow: {
+        title: "Joedell AI Assistant",
+        backgroundColor: "#0764f8ff",
+        botMessageBackground: "#2a77e2ff",
+        userMessageBackground: "#0f4a63ff",
+        textColor: "#ffffff"
       }
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"></script>
+    }
+  };
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js" defer></script>
 
 </body>
 
