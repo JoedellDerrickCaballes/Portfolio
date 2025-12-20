@@ -209,29 +209,31 @@
 
 
 <!-- ⭐ FIXED WORKING FLOWISE CHATBOT ⭐ -->
+<script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"></script>
+
 <script>
 window.addEventListener("DOMContentLoaded", function () {
-    const script = document.createElement("script");
-    script.src = "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
-    script.onload = function () {
-        Chatbot.init({
-            chatflowid: "25189dcf-6ccb-4d2f-b8d3-431ea46e45af",
-            apiHost: "https://cloud.flowiseai.com",
+    if (typeof Chatbot === "undefined") {
+        console.error("Flowise Chatbot failed to load.");
+        return;
+    }
 
-            theme: {
-                button: {
-                    backgroundColor: "#3B81F6",
-                    right: 20,
-                    bottom: 20,
-                    size: 60,
-                    iconColor: "white"
-                }
+    Chatbot.init({
+        chatflowid: "033c698f-5974-49f3-a3dd-727cc9a7b633",
+        apiHost: "https://cloud.flowiseai.com",
+        theme: {
+            button: {
+                backgroundColor: "#3B81F6",
+                right: 20,
+                bottom: 20,
+                size: 60,
+                iconColor: "white",
             }
-        });
-    };
-    document.body.appendChild(script);
+        }
+    });
 });
 </script>
+
 
 </body>
 </html>
