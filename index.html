@@ -19,7 +19,6 @@
       line-height: 1.7;
     }
 
-    /* ===== HERO SECTION ===== */
     header {
       padding: 90px 20px 60px;
       text-align: center;
@@ -46,7 +45,6 @@
       color: #94a3b8;
     }
 
-    /* ===== NAVIGATION ===== */
     nav {
       position: sticky;
       top: 0;
@@ -88,7 +86,6 @@
       width: 100%;
     }
 
-    /* ===== SECTIONS ===== */
     section {
       padding: 90px 12%;
       max-width: 1300px;
@@ -101,7 +98,6 @@
       font-size: 2.2rem;
     }
 
-    /* ===== PROJECT CARDS ===== */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -127,7 +123,6 @@
       color: #38bdf8;
     }
 
-    /* ===== SKILLS LIST ===== */
     ul {
       padding: 0;
       list-style: none;
@@ -147,7 +142,6 @@
       color: #38bdf8;
     }
 
-    /* ===== FOOTER ===== */
     footer {
       text-align: center;
       padding: 30px;
@@ -161,14 +155,12 @@
 
 <body>
 
-  <!-- ========== HERO ========== -->
   <header>
     <img src="me.jpg" alt="Profile Photo" />
     <h1>Joedell Derrick Caballes</h1>
     <p>Programmer</p>
   </header>
 
-  <!-- ========== NAV ========== -->
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -176,7 +168,6 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- ========== ABOUT ========== -->
   <section id="about">
     <h2>About Me</h2>
     <p>
@@ -185,7 +176,6 @@
     </p>
   </section>
 
-  <!-- ========== PROJECTS ========== -->
   <section id="projects">
     <h2>Projects</h2>
 
@@ -201,13 +191,12 @@
       </div>
 
       <div class="card">
-        <h3></h3>
+        <h3>CharityMarket</h3>
         <p>Marketplace for handmade goods with charity integration.</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== SKILLS ========== -->
   <section id="skills">
     <h2>Skills</h2>
     <ul>
@@ -218,7 +207,6 @@
     </ul>
   </section>
 
-  <!-- ========== CONTACT ========== -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <span style="color:#38bdf8">cabs.derrick20@gmail.com</span></p>
@@ -229,43 +217,45 @@
     </p>
   </section>
 
-  <!-- ========== FOOTER ========== -->
   <footer>
     © 2025 Joedell Derrick Caballes. All rights reserved.
   </footer>
 
-  <!-- ========== FLOWISE CHATBOT (FINAL WORKING VERSION) ========== -->
-<script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"></script>
-<script>
+  <!-- ========== FIXED FLOWISE VERSION (NO IMPORT, WORKS ON GITHUB PAGES) ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"></script>
+  <script>
     Chatbot.init({
-        chatflowid: "033c698f-5974-49f3-a3dd-727cc9a7b633",
-        apiHost: "https://cloud.flowiseai.com",
+      chatflowid: "033c698f-5974-49f3-a3dd-727cc9a7b633",
+      apiHost: "https://cloud.flowiseai.com",
 
-        theme: {
-            button: {
-                backgroundColor: '#3B81F6',
-                right: 20,
-                bottom: 20,
-                size: 48,
-                dragAndDrop: true,
-                iconColor: 'white',
-                customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
-                autoWindowOpen: {
-                    autoOpen: true,
-                    openDelay: 2,
-                    autoOpenOnMobile: false
-                }
-            },
-            chatWindow: {
-                showTitle: true,
-                title: 'Flowise Bot',
-                welcomeMessage: 'Hello! This is custom welcome message',
-                height: 700,
-                width: 400
-            }
+      theme: {
+        button: {
+          backgroundColor: '#3B81F6',
+          right: 20,
+          bottom: 20,
+          size: 48,
+          dragAndDrop: true,
+          iconColor: 'white',
+          customIconSrc:
+            'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+          autoWindowOpen: {
+            autoOpen: true,
+            openDelay: 2,
+            autoOpenOnMobile: false
+          }
+        },
+
+        chatWindow: {
+          showTitle: true,
+          title: "Portfolio Assistant",
+          welcomeMessage: "Hi! Ask me anything about Joedell Derrick Caballes.",
+          height: 700,
+          width: 400
         }
+      }
     });
-</script>
+  </script>
+
 </body>
 
 </html>
