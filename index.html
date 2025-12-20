@@ -210,34 +210,31 @@
 
 <!-- ⭐ FIXED WORKING FLOWISE CHATBOT ⭐ -->
 <!-- Use ES module import for Flowise Embed (preferred method) -->
-<script type="module">
-import Chatbot from 'https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js';
+<script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"></script>
 
-(async () => {
-  try {
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+
+    if (typeof Chatbot === "undefined") {
+        console.error("Flowise Chatbot failed to load.");
+        return;
+    }
+
     Chatbot.init({
-      chatflowid: "25189dcf-6ccb-4d2f-b8d3-431ea46e45af",
-      apiHost: "https://cloud.flowiseai.com",
-      theme: {
-        button: {
-          backgroundColor: "#3B81F6",
-          right: 20,
-          bottom: 20,
-          size: 55,
-          iconColor: "white",
-          customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg"
+        chatflowid: "25189dcf-6ccb-4d2f-b8d3-431ea46e45af",
+        apiHost: "https://cloud.flowiseai.com",
+        theme: {
+            button: {
+                backgroundColor: "#3B81F6",
+                size: 60,
+                right: 20,
+                bottom: 20
+            }
         }
-      }
-      // Optional for testing: enable autoWindowOpen to see the window open automatically
-      // button: { autoWindowOpen: { autoOpen: true, openDelay: 1 } }
     });
-  } catch (err) {
-    console.error("❌ Flowise Chatbot failed to initialize:", err);
-  }
-})();
+
+});
 </script>
-
-
 
 </body>
 </html>
