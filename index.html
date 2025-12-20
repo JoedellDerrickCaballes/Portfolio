@@ -106,40 +106,67 @@
       margin-bottom: 30px;
     }
 
-    /* Cards */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
+    /* PROJECT SECTION TITLE */
+#projects h2 {
+    font-size: 2.2rem;
+    color: #3BA4F9;
+    margin-bottom: 25px;
+}
 
-    .card {
-      background: var(--card);
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-      transition: 0.35s;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
+/* GRID LAYOUT */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
 
-    .card:hover {
-      transform: translateY(-8px);
-      background: #243447;
-      box-shadow: 0 0 20px rgba(59,130,246,0.4);
-    }
+/* PROJECT CARD */
+.project-card {
+    background: rgba(10, 15, 30, 0.8);
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s ease;
+}
 
-    .card h3 {
-      color: var(--primary);
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-    }
+/* Hover Glow */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 22px rgba(59, 164, 249, 0.45);
+    border-color: rgba(59, 164, 249, 0.35);
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-      color: var(--text-light);
-    }
+/* TITLE */
+.project-card h3 {
+    color: #ffffff;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+/* DESCRIPTION */
+.project-card p {
+    color: #cfcfcf;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* BUTTON */
+.project-btn {
+    display: inline-block;
+    background: #31a8ff;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s ease;
+}
+
+.project-btn:hover {
+    background: #1693f3;
+}
   </style>
 </head>
 
@@ -166,21 +193,27 @@
 
 <section id="projects">
   <h2>Projects</h2>
-  
-    <div class="projects-grid">
-<div class="project-card">
-    <h3>TaskFlow AI</h3>
-    <p>Smart productivity assistant that auto-organizes tasks and predicts what needs attention first.</p>
-</div>
-  
-<div class="project-card">
-    <h3>HealthEcho</h3>
-    <p>Personal health dashboard that tracks habits and provides weekly AI-powered improvement tips.</p>
-</div>
 
-<div class="project-card">
-    <h3>SkillForge Academy</h3>
-    <p>Micro-learning platform with short lessons and AI-generated quizzes for faster learning.</p>
+<div class="projects-grid">
+
+    <div class="project-card">
+        <h3>TaskFlow AI</h3>
+        <p>Smart productivity assistant that auto-organizes tasks and predicts what needs attention first.</p>
+        <a href="#" class="project-btn">View</a>
+    </div>
+
+    <div class="project-card">
+        <h3>HealthEcho</h3>
+        <p>Personal health dashboard that tracks habits and provides weekly AI-powered improvement tips.</p>
+        <a href="#" class="project-btn">View</a>
+    </div>
+
+    <div class="project-card">
+        <h3>SkillForge Academy</h3>
+        <p>Micro-learning platform with short lessons and AI-generated quizzes for faster learning.</p>
+        <a href="#" class="project-btn">View</a>
+    </div>
+
 </div>
 
 <section id="skills">
@@ -190,7 +223,7 @@
     <li>HTML & CSS</li>
     <li>PHP</li>
     <li>Coding</li>
-    <li></li>
+    <li>Python</li>
   </ul>
 </section>
 
