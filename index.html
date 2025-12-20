@@ -19,6 +19,7 @@
       line-height: 1.7;
     }
 
+    /* ===== HERO SECTION ===== */
     header {
       padding: 90px 20px 60px;
       text-align: center;
@@ -45,6 +46,7 @@
       color: #94a3b8;
     }
 
+    /* NAV */
     nav {
       position: sticky;
       top: 0;
@@ -64,26 +66,10 @@
       font-size: 1rem;
       font-weight: 500;
       transition: 0.3s ease;
-      position: relative;
     }
 
     nav a:hover {
       color: #38bdf8;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background: #38bdf8;
-      left: 0;
-      bottom: -5px;
-      transition: 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
     }
 
     section {
@@ -117,12 +103,6 @@
       background: #334155;
     }
 
-    .card h3 {
-      margin-top: 0;
-      font-size: 1.3rem;
-      color: #38bdf8;
-    }
-
     ul {
       padding: 0;
       list-style: none;
@@ -131,8 +111,8 @@
     ul li {
       padding: 10px 0;
       font-size: 1.05rem;
-      position: relative;
       padding-left: 25px;
+      position: relative;
     }
 
     ul li::before {
@@ -148,19 +128,20 @@
       background: #020617;
       margin-top: 40px;
       color: #94a3b8;
-      border-top: 1px solid rgba(148, 163, 184, 0.2);
     }
   </style>
 </head>
 
 <body>
 
+  <!-- HERO -->
   <header>
     <img src="me.jpg" alt="Profile Photo" />
     <h1>Joedell Derrick Caballes</h1>
     <p>Programmer</p>
   </header>
 
+  <!-- NAV -->
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -168,6 +149,7 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- ABOUT -->
   <section id="about">
     <h2>About Me</h2>
     <p>
@@ -176,6 +158,7 @@
     </p>
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects">
     <h2>Projects</h2>
 
@@ -191,12 +174,13 @@
       </div>
 
       <div class="card">
-        <h3>CharityMarket</h3>
+        <h3>Handmade Market</h3>
         <p>Marketplace for handmade goods with charity integration.</p>
       </div>
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills">
     <h2>Skills</h2>
     <ul>
@@ -207,6 +191,7 @@
     </ul>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <span style="color:#38bdf8">cabs.derrick20@gmail.com</span></p>
@@ -221,24 +206,41 @@
     © 2025 Joedell Derrick Caballes. All rights reserved.
   </footer>
 
-  <!-- ========== FIXED FLOWISE VERSION (NO IMPORT, WORKS ON GITHUB PAGES) ========== -->
+  <!-- ✅ FLOWISE CHATBOT (GITHUB-PAGES COMPATIBLE NO-MODULE VERSION) -->
   <script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"></script>
 
-<script>
+  <script>
     Chatbot.init({
-        chatflowid: "033c698f-5974-49f3-a3dd-727cc9a7b633",
-        apiHost: "https://cloud.flowiseai.com",
+      chatflowid: "033c698f-5974-49f3-a3dd-727cc9a7b633",
+      apiHost: "https://cloud.flowiseai.com",
 
-        theme: {
-            button: {
-                backgroundColor: '#3B81F6',
-                right: 20,
-                bottom: 20,
-                size: 48
-            }
+      theme: {
+        button: {
+          backgroundColor: "#3B81F6",
+          right: 20,
+          bottom: 20,
+          size: 48,
+          dragAndDrop: true,
+          iconColor: "white"
+        },
+        chatWindow: {
+          title: "Joedell AI Assistant",
+          welcomeMessage: "Hello! How can I help you today?",
+          backgroundColor: "#ffffff",
+          width: 420,
+          height: 600,
+          botMessage: {
+            backgroundColor: "#f7f8ff",
+            textColor: "#303235"
+          },
+          userMessage: {
+            backgroundColor: "#3B81F6",
+            textColor: "#ffffff"
+          }
         }
+      }
     });
-</script>
+  </script>
 
 </body>
 
