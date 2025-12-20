@@ -1,247 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joedell Derrick Caballes | Portfolio</title>
 
   <style>
+    :root {
+      --primary: #3b82f6;
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text-light: #cbd5e1;
+      --text: #e2e8f0;
+    }
+
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
       font-family: 'Inter', sans-serif;
     }
 
     body {
-      margin: 0;
-      background: #000000;
-      color: #eef0f3;
-      line-height: 1.7;
+      background: var(--bg);
+      color: var(--text);
     }
 
-    /* ===== HERO SECTION ===== */
+    /* Smooth fade animations */
+    section, header {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.9s ease-out forwards;
+    }
+    header { animation-delay: 0.2s }
+    #projects { animation-delay: 0.4s }
+    #skills { animation-delay: 0.6s }
+    #contact { animation-delay: 0.8s }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Header */
     header {
-      padding: 90px 20px 60px;
       text-align: center;
+      padding: 80px 20px 40px;
     }
 
     header img {
       width: 160px;
       height: 160px;
       border-radius: 50%;
+      border: 4px solid var(--primary);
       object-fit: cover;
-      border: 4px solid #0805ee;
-      box-shadow: 0 15px 40px rgba(97, 71, 91, 0.4);
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
     }
 
     header h1 {
       margin-top: 20px;
       font-size: 2.8rem;
-      font-weight: 700;
+      font-weight: bold;
     }
 
     header p {
       margin-top: 8px;
-      font-size: 1.1rem;
-      color: #94a3b8;
+      color: var(--text-light);
+      font-size: 1.2rem;
     }
 
-    /* NAV */
+    /* Navigation */
     nav {
       position: sticky;
       top: 0;
-      z-index: 10;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 16px;
       display: flex;
       justify-content: center;
       gap: 40px;
-      padding: 18px;
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      z-index: 999;
     }
 
     nav a {
-      color: #e5e7eb;
       text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: 0.3s ease;
+      color: var(--text-light);
+      font-size: 1.1rem;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      color: #38bdf8;
+      color: var(--primary);
     }
 
+    /* Sections */
     section {
-      padding: 90px 12%;
-      max-width: 1300px;
+      padding: 70px 10%;
+      max-width: 1200px;
       margin: auto;
     }
 
     h2 {
-      color: #38bdf8;
-      margin-bottom: 35px;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
+      color: var(--primary);
+      margin-bottom: 30px;
     }
 
-    .projects {
+    /* Cards */
+    .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
+      gap: 30px;
     }
 
     .card {
-      background: #1e293b;
+      background: var(--card);
       padding: 25px;
       border-radius: 16px;
-      transition: 0.3s ease;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      transition: 0.35s;
+      border: 1px solid rgba(255,255,255,0.05);
     }
 
     .card:hover {
       transform: translateY(-8px);
-      background: #334155;
+      background: #243447;
+      box-shadow: 0 0 20px rgba(59,130,246,0.4);
     }
 
-    ul {
-      padding: 0;
-      list-style: none;
-    }
-
-    ul li {
-      padding: 10px 0;
-      font-size: 1.05rem;
-      padding-left: 25px;
-      position: relative;
-    }
-
-    ul li::before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: #38bdf8;
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.4rem;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      background: #020617;
-      margin-top: 40px;
-      color: #94a3b8;
+      padding: 20px;
+      margin-top: 50px;
+      color: var(--text-light);
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header>
-    <img src="me.jpg" alt="Profile Photo" />
-    <h1>Joedell Derrick Caballes</h1>
-    <p>Programmer</p>
-  </header>
+<header>
+  <img src="me.jpg" alt="Profile Photo">
+  <h1>Joedell Derrick Caballes</h1>
+  <p>Programmer</p>
+</header>
 
-  <!-- NAV -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a programmer who enjoys coding and doing things many people cannot believe.
-      I am confident with my skills and always learning new technologies.
-    </p>
-  </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a programmer passionate about building systems that solve real-world problems.
+     I love learning new technologies and creating smart solutions.</p>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
+<section id="projects">
+  <h2>Projects</h2>
 
-    <div class="projects">
-      <div class="card">
-        <h3>BizConsult</h3>
-        <p>Online business consultation system with scheduling and video call support.</p>
-      </div>
-
-      <div class="card">
-        <h3>NeighborWatch</h3>
-        <p>Real-time neighborhood safety alert and reporting system.</p>
-      </div>
-
-      <div class="card">
-        <h3>Handmade Market</h3>
-        <p>Marketplace for handmade goods with charity integration.</p>
-      </div>
+  <div class="projects-grid">
+    <div class="card">
+      <h3>BizConsult</h3>
+      <p>Online business consultation system with scheduling and video call support.</p>
     </div>
-  </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>JavaScript</li>
-      <li>HTML & CSS</li>
-      <li>PHP</li>
-      <li>MySQL</li>
-    </ul>
-  </section>
+    <div class="card">
+      <h3>NeighborWatch</h3>
+      <p>Real-time neighborhood safety alert and reporting system.</p>
+    </div>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <span style="color:#38bdf8">cabs.derrick20@gmail.com</span></p>
-    <p>GitHub:
-      <a href="https://github.com/JoedellDerrickCaballes" style="color:#38bdf8">
-        github.com/JoedellDerrickCaballes
-      </a>
-    </p>
-  </section>
+    <div class="card">
+      <h3>CharityMarket</h3>
+      <p>Marketplace for handmade goods with charity integration.</p>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    © 2025 Joedell Derrick Caballes. All rights reserved.
-  </footer>
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>JavaScript</li>
+    <li>HTML & CSS</li>
+    <li>PHP</li>
+    <li>MySQL</li>
+  </ul>
+</section>
 
-  <!-- ✅ FLOWISE CHATBOT (GITHUB-PAGES COMPATIBLE NO-MODULE VERSION) -->
-  <script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"></script>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <span style="color: var(--primary);">cabs.derrick20@gmail.com</span></p>
+  <p>GitHub:
+    <a href="https://github.com/JoedellDerrickCaballes" style="color: var(--primary);">
+      github.com/JoedellDerrickCaballes
+    </a>
+  </p>
+</section>
 
-  <script>
-    Chatbot.init({
-      chatflowid: "033c698f-5974-49f3-a3dd-727cc9a7b633",
-      apiHost: "https://cloud.flowiseai.com",
+<footer>© 2025 Joedell Derrick Caballes. All rights reserved.</footer>
 
-      theme: {
-        button: {
-          backgroundColor: "#3B81F6",
-          right: 20,
-          bottom: 20,
-          size: 48,
-          dragAndDrop: true,
-          iconColor: "white"
-        },
-        chatWindow: {
-          title: "Joedell AI Assistant",
-          welcomeMessage: "Hello! How can I help you today?",
-          backgroundColor: "#ffffff",
-          width: 420,
-          height: 600,
-          botMessage: {
-            backgroundColor: "#f7f8ff",
-            textColor: "#303235"
-          },
-          userMessage: {
-            backgroundColor: "#3B81F6",
-            textColor: "#ffffff"
-          }
-        }
-      }
-    });
-  </script>
+
+<!-- ⭐ FIXED WORKING FLOWISE CHATBOT ⭐ -->
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
+    script.onload = function () {
+        Chatbot.init({
+            chatflowid: "033c698f-5974-49f3-a3dd-727cc9a7b633",
+            apiHost: "https://cloud.flowiseai.com",
+
+            theme: {
+                button: {
+                    backgroundColor: "#3B81F6",
+                    right: 20,
+                    bottom: 20,
+                    size: 60,
+                    iconColor: "white"
+                }
+            }
+        });
+    };
+    document.body.appendChild(script);
+});
+</script>
 
 </body>
-
 </html>
