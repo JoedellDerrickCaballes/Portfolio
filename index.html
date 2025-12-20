@@ -166,24 +166,21 @@
 
 <section id="projects">
   <h2>Projects</h2>
+  
+<div class="project-card">
+    <h3>TaskFlow AI</h3>
+    <p>Smart productivity assistant that auto-organizes tasks and predicts what needs attention first.</p>
+</div>
 
-  <div class="projects-grid">
-    <div class="card">
-      <h3>BizConsult</h3>
-      <p>Online business consultation system with scheduling and video call support.</p>
-    </div>
+<div class="project-card">
+    <h3>HealthEcho</h3>
+    <p>Personal health dashboard that tracks habits and provides weekly AI-powered improvement tips.</p>
+</div>
 
-    <div class="card">
-      <h3>NeighborWatch</h3>
-      <p>Real-time neighborhood safety alert and reporting system.</p>
-    </div>
-
-    <div class="card">
-      <h3>CharityMarket</h3>
-      <p>Marketplace for handmade goods with charity integration.</p>
-    </div>
-  </div>
-</section>
+<div class="project-card">
+    <h3>SkillForge Academy</h3>
+    <p>Micro-learning platform with short lessons and AI-generated quizzes for faster learning.</p>
+</div>
 
 <section id="skills">
   <h2>Skills</h2>
@@ -211,29 +208,21 @@
 
 <!-- ⭐ FIXED WORKING FLOWISE CHATBOT ⭐ -->
 <!-- Use ES module import for Flowise Embed (preferred method) -->
-<script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"></script>
+<script type="module">
+import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
 
-<script>
-window.addEventListener("DOMContentLoaded", function () {
-
-    if (typeof Chatbot === "undefined") {
-        console.error("Flowise Chatbot failed to load.");
-        return;
-    }
-
-    Chatbot.init({
-        chatflowid: "25189dcf-6ccb-4d2f-b8d3-431ea46e45af",
-        apiHost: "https://cloud.flowiseai.com",
-        theme: {
-            button: {
-                backgroundColor: "#3B81F6",
-                size: 60,
-                right: 20,
-                bottom: 20
-            }
+Chatbot.init({
+    chatflowid: "25189dcf-6ccb-4d2f-b8d3-431ea46e45af",
+    apiHost: "https://cloud.flowiseai.com",
+    theme: {
+        button: {
+            backgroundColor: "#3B81F6",
+            right: 20,
+            bottom: 20,
+            size: 60,
+            iconColor: "white"
         }
-    });
-
+    }
 });
 </script>
 </body>
