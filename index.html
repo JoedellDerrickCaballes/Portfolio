@@ -209,34 +209,32 @@
 
 
 <!-- ⭐ FIXED WORKING FLOWISE CHATBOT ⭐ -->
-<!-- Load Flowise Embed (non-module version so it works on GitHub Pages) -->
-<script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"></script>
+<!-- Use ES module import for Flowise Embed (preferred method) -->
+<script type="module">
+import Chatbot from 'https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js';
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    // Safety check so GitHub Pages doesn't break
-    if (typeof window.Chatbot === "undefined") {
-        console.error("❌ Flowise Chatbot failed to load.");
-        return;
-    }
-
-    window.Chatbot.init({
-        chatflowid: "033c698f-5974-49f3-a3dd-727cc9a7b633",
-        apiHost: "https://cloud.flowiseai.com",
-
-        theme: {
-            button: {
-                backgroundColor: "#3B81F6",
-                right: 20,
-                bottom: 20,
-                size: 55,
-                iconColor: "white",
-                customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg"
-            }
+(async () => {
+  try {
+    Chatbot.init({
+      chatflowid: "033c698f-5974-49f3-a3dd-727cc9a7b633",
+      apiHost: "https://cloud.flowiseai.com",
+      theme: {
+        button: {
+          backgroundColor: "#3B81F6",
+          right: 20,
+          bottom: 20,
+          size: 55,
+          iconColor: "white",
+          customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg"
         }
+      }
+      // Optional for testing: enable autoWindowOpen to see the window open automatically
+      // button: { autoWindowOpen: { autoOpen: true, openDelay: 1 } }
     });
-});
+  } catch (err) {
+    console.error("❌ Flowise Chatbot failed to initialize:", err);
+  }
+})();
 </script>
 
 
