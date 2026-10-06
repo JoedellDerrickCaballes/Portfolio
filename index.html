@@ -8,47 +8,29 @@
     <title>Joedell Derrick Caballes | Portfolio</title>
 
     <style>
-
-        /* =========================================
-           ROOT VARIABLES
-        ========================================= */
-
         :root {
             --primary: #3b82f6;
             --primary-light: #31a8ff;
-
             --bg: #050a14;
             --card: rgba(10, 15, 30, 0.78);
-
             --text: #e2e8f0;
             --text-light: #cbd5e1;
-
             --border: rgba(255, 255, 255, 0.08);
         }
-
-
-        /* =========================================
-           RESET
-        ========================================= */
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-
             font-family: 'Inter', Arial, sans-serif;
         }
-
 
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
-
             color: var(--text);
-
             min-height: 100vh;
 
             background:
@@ -65,19 +47,10 @@
             overflow-x: hidden;
         }
 
-
-        /* =========================================
-           BACKGROUND EFFECT
-        ========================================= */
-
         body::before {
-
             content: "";
-
             position: fixed;
-
             inset: 0;
-
             pointer-events: none;
 
             background:
@@ -90,78 +63,51 @@
             z-index: -1;
         }
 
-
-        /* =========================================
-           ANIMATIONS
-        ========================================= */
-
         header,
         section {
-
             opacity: 0;
-
             transform: translateY(25px);
-
-            animation:
-                fadeIn 0.9s ease-out forwards;
+            animation: fadeIn 0.9s ease-out forwards;
         }
-
 
         header {
             animation-delay: 0.1s;
         }
 
-
         #about {
             animation-delay: 0.2s;
         }
-
 
         #projects {
             animation-delay: 0.4s;
         }
 
-
         #skills {
             animation-delay: 0.6s;
         }
-
 
         #contact {
             animation-delay: 0.8s;
         }
 
-
         @keyframes fadeIn {
-
             to {
-
                 opacity: 1;
-
-                transform:
-                    translateY(0);
+                transform: translateY(0);
             }
         }
 
-
-        /* =========================================
-           HEADER
-        ========================================= */
+        /* HEADER */
 
         header {
-
             min-height: 460px;
 
             display: flex;
-
             flex-direction: column;
-
             align-items: center;
-
             justify-content: center;
 
             text-align: center;
-
             padding: 80px 20px 50px;
 
             background:
@@ -170,261 +116,162 @@
                     rgba(5, 10, 20, 0.65)
                 );
 
-            border-bottom:
-                1px solid var(--border);
+            border-bottom: 1px solid var(--border);
         }
 
-
-        /* PROFILE IMAGE */
-
         header img {
-
             width: 160px;
-
             height: 160px;
 
             border-radius: 50%;
-
             object-fit: cover;
 
-            border:
-                4px solid var(--primary);
+            border: 4px solid var(--primary);
 
             box-shadow:
-
-                0 0 25px
-                rgba(59, 130, 246, 0.65),
-
-                0 0 60px
-                rgba(59, 130, 246, 0.25);
+                0 0 25px rgba(59, 130, 246, 0.65),
+                0 0 60px rgba(59, 130, 246, 0.25);
 
             transition:
                 transform 0.4s ease,
                 box-shadow 0.4s ease;
         }
 
-
         header img:hover {
-
-            transform:
-                scale(1.06);
+            transform: scale(1.06);
 
             box-shadow:
-
-                0 0 35px
-                rgba(59, 130, 246, 0.9),
-
-                0 0 90px
-                rgba(59, 130, 246, 0.35);
+                0 0 35px rgba(59, 130, 246, 0.9),
+                0 0 90px rgba(59, 130, 246, 0.35);
         }
 
-
-        /* NAME */
-
         header h1 {
-
             margin-top: 22px;
-
             font-size: 2.8rem;
-
             font-weight: 700;
-
             letter-spacing: 0.5px;
 
             text-shadow:
-                0 0 20px
-                rgba(59, 130, 246, 0.2);
+                0 0 20px rgba(59, 130, 246, 0.2);
         }
 
-
-        /* JOB TITLE */
-
         header p {
-
             margin-top: 10px;
-
-            color:
-                var(--text-light);
-
+            color: var(--text-light);
             font-size: 1.2rem;
-
             letter-spacing: 3px;
         }
 
-
-        /* =========================================
-           NAVIGATION
-        ========================================= */
+        /* NAVIGATION */
 
         nav {
-
             position: sticky;
-
             top: 0;
-
             z-index: 999;
 
             display: flex;
-
             justify-content: center;
-
             align-items: center;
 
             gap: 40px;
-
             padding: 17px;
 
-            background:
-                rgba(5, 10, 20, 0.72);
+            background: rgba(5, 10, 20, 0.72);
 
-            backdrop-filter:
-                blur(15px);
-
-            -webkit-backdrop-filter:
-                blur(15px);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
 
             border-bottom:
                 1px solid
                 rgba(255, 255, 255, 0.08);
         }
 
-
         nav a {
-
             position: relative;
 
-            color:
-                var(--text-light);
-
+            color: var(--text-light);
             text-decoration: none;
-
             font-size: 1.05rem;
 
-            transition:
-                color 0.3s ease;
+            transition: color 0.3s ease;
         }
 
-
         nav a::after {
-
             content: "";
 
             position: absolute;
-
             left: 0;
-
             bottom: -7px;
 
             width: 0;
-
             height: 2px;
 
-            background:
-                var(--primary);
+            background: var(--primary);
 
             box-shadow:
-                0 0 10px
-                var(--primary);
+                0 0 10px var(--primary);
 
-            transition:
-                width 0.3s ease;
+            transition: width 0.3s ease;
         }
-
 
         nav a:hover {
-
-            color:
-                white;
+            color: white;
         }
-
 
         nav a:hover::after {
-
             width: 100%;
         }
 
-
-        /* =========================================
-           SECTIONS
-        ========================================= */
+        /* SECTIONS */
 
         section {
-
             width: 100%;
-
             max-width: 1200px;
-
             margin: auto;
-
             padding: 80px 10%;
         }
 
-
         h2 {
-
             position: relative;
-
             display: inline-block;
 
             font-size: 2.4rem;
-
-            color:
-                var(--primary);
-
+            color: var(--primary);
             margin-bottom: 30px;
 
             text-shadow:
-                0 0 20px
-                rgba(59, 130, 246, 0.25);
+                0 0 20px rgba(59, 130, 246, 0.25);
         }
 
-
         h2::after {
-
             content: "";
 
             position: absolute;
-
             left: 0;
-
             bottom: -8px;
 
             width: 45px;
-
             height: 3px;
 
-            background:
-                var(--primary);
+            background: var(--primary);
 
             box-shadow:
-                0 0 12px
-                var(--primary);
+                0 0 12px var(--primary);
         }
 
-
-        /* =========================================
-           ABOUT
-        ========================================= */
+        /* ABOUT */
 
         #about p {
-
             max-width: 850px;
 
-            color:
-                var(--text-light);
-
+            color: var(--text-light);
             font-size: 1.05rem;
-
             line-height: 1.9;
         }
 
-
-        /* =========================================
-           PROJECTS
-        ========================================= */
+        /* PROJECTS */
 
         .projects-grid {
-
             display: grid;
 
             grid-template-columns:
@@ -436,29 +283,20 @@
             gap: 28px;
         }
 
-
-        /* PROJECT CARD */
-
         .project-card {
-
             position: relative;
 
             padding: 30px;
-
             border-radius: 20px;
 
-            background:
-                var(--card);
+            background: var(--card);
 
             border:
                 1px solid
                 rgba(255, 255, 255, 0.06);
 
-            backdrop-filter:
-                blur(12px);
-
-            -webkit-backdrop-filter:
-                blur(12px);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
 
             box-shadow:
                 0 15px 40px
@@ -472,21 +310,14 @@
                 border-color 0.35s ease;
         }
 
-
-        /* CARD LIGHT */
-
         .project-card::before {
-
             content: "";
 
             position: absolute;
-
             top: -80px;
-
             right: -80px;
 
             width: 160px;
-
             height: 160px;
 
             border-radius: 50%;
@@ -494,24 +325,18 @@
             background:
                 rgba(59, 130, 246, 0.08);
 
-            filter:
-                blur(20px);
+            filter: blur(20px);
 
-            transition:
-                0.4s ease;
+            transition: 0.4s ease;
         }
 
-
         .project-card:hover {
-
-            transform:
-                translateY(-8px);
+            transform: translateY(-8px);
 
             border-color:
                 rgba(59, 164, 249, 0.4);
 
             box-shadow:
-
                 0 20px 50px
                 rgba(0, 0, 0, 0.5),
 
@@ -519,69 +344,42 @@
                 rgba(59, 130, 246, 0.18);
         }
 
-
         .project-card:hover::before {
-
-            transform:
-                scale(1.5);
+            transform: scale(1.5);
         }
 
-
         .project-card h3 {
-
-            color:
-                white;
-
+            color: white;
             font-size: 1.4rem;
-
             margin-bottom: 14px;
 
             position: relative;
-
             z-index: 1;
         }
 
-
         .project-card p {
-
-            color:
-                #cbd5e1;
-
+            color: #cbd5e1;
             line-height: 1.6;
-
             font-size: 0.96rem;
-
             margin-bottom: 24px;
 
             position: relative;
-
             z-index: 1;
         }
 
-
-        /* PROJECT BUTTON */
-
         .project-btn {
-
             display: inline-block;
 
-            padding:
-                10px 22px;
+            padding: 10px 22px;
 
-            background:
-                var(--primary-light);
-
-            color:
-                white;
+            background: var(--primary-light);
+            color: white;
 
             text-decoration: none;
-
             border-radius: 10px;
-
             font-size: 0.95rem;
 
             position: relative;
-
             z-index: 1;
 
             transition:
@@ -590,41 +388,28 @@
                 box-shadow 0.2s ease;
         }
 
-
         .project-btn:hover {
+            background: #1693f3;
 
-            background:
-                #1693f3;
-
-            transform:
-                translateY(-2px);
+            transform: translateY(-2px);
 
             box-shadow:
                 0 0 18px
                 rgba(49, 168, 255, 0.45);
         }
 
-
-        /* =========================================
-           SKILLS
-        ========================================= */
+        /* SKILLS */
 
         #skills ul {
-
             list-style: none;
 
             display: flex;
-
             flex-wrap: wrap;
-
             gap: 14px;
         }
 
-
         #skills li {
-
-            padding:
-                11px 19px;
+            padding: 11px 19px;
 
             border-radius: 12px;
 
@@ -635,11 +420,9 @@
                 1px solid
                 rgba(59, 130, 246, 0.18);
 
-            color:
-                var(--text-light);
+            color: var(--text-light);
 
-            backdrop-filter:
-                blur(8px);
+            backdrop-filter: blur(8px);
 
             transition:
                 transform 0.3s ease,
@@ -648,11 +431,8 @@
                 box-shadow 0.3s ease;
         }
 
-
         #skills li:hover {
-
-            transform:
-                translateY(-4px);
+            transform: translateY(-4px);
 
             background:
                 rgba(59, 130, 246, 0.13);
@@ -665,59 +445,38 @@
                 rgba(59, 130, 246, 0.18);
         }
 
-
-        /* =========================================
-           CONTACT
-        ========================================= */
+        /* CONTACT */
 
         #contact p {
-
-            color:
-                var(--text-light);
-
+            color: var(--text-light);
             margin-bottom: 12px;
-
             line-height: 1.7;
         }
 
-
         #contact a {
-
-            color:
-                var(--primary);
-
+            color: var(--primary);
             text-decoration: none;
 
-            transition:
-                0.3s ease;
+            transition: 0.3s ease;
         }
 
-
         #contact a:hover {
-
-            color:
-                #60a5fa;
+            color: #60a5fa;
 
             text-shadow:
                 0 0 10px
                 rgba(59, 130, 246, 0.5);
         }
 
-
-        /* =========================================
-           FOOTER
-        ========================================= */
+        /* FOOTER */
 
         footer {
-
             text-align: center;
 
             padding: 30px 20px;
-
             margin-top: 30px;
 
-            color:
-                #94a3b8;
+            color: #94a3b8;
 
             background:
                 rgba(3, 7, 15, 0.75);
@@ -727,116 +486,73 @@
                 rgba(255, 255, 255, 0.06);
         }
 
-
-        /* =========================================
-           MOBILE
-        ========================================= */
+        /* MOBILE */
 
         @media (max-width: 700px) {
-
             header {
-
                 min-height: 400px;
-
-                padding:
-                    70px 20px 40px;
+                padding: 70px 20px 40px;
             }
 
-
             header img {
-
                 width: 130px;
-
                 height: 130px;
             }
 
-
             header h1 {
-
                 font-size: 2rem;
             }
 
-
             header p {
-
                 font-size: 1rem;
-
                 letter-spacing: 2px;
             }
 
-
             nav {
-
                 gap: 18px;
-
                 padding: 14px 8px;
             }
 
-
             nav a {
-
                 font-size: 0.9rem;
             }
 
-
             section {
-
-                padding:
-                    60px 7%;
+                padding: 60px 7%;
             }
 
-
             h2 {
-
                 font-size: 2rem;
             }
 
-
             .projects-grid {
-
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
         }
 
-
-        /* =========================================
-           SMALL PHONES
-        ========================================= */
+        /* SMALL PHONES */
 
         @media (max-width: 420px) {
-
             nav {
-
                 gap: 12px;
             }
 
-
             nav a {
-
                 font-size: 0.82rem;
             }
 
-
             header h1 {
-
                 font-size: 1.7rem;
             }
         }
-
     </style>
 </head>
 
-
 <body>
 
-
-    <!-- =========================================
-         HEADER
-    ========================================= -->
+    <!-- HEADER -->
 
     <header>
-
         <img
             src="me.jpg"
             alt="Joedell Derrick Caballes"
@@ -849,17 +565,11 @@
         <p>
             Programmer
         </p>
-
     </header>
 
-
-
-    <!-- =========================================
-         NAVIGATION
-    ========================================= -->
+    <!-- NAVIGATION -->
 
     <nav>
-
         <a href="#about">
             About
         </a>
@@ -875,62 +585,43 @@
         <a href="#contact">
             Contact
         </a>
-
     </nav>
 
-
-
-    <!-- =========================================
-         ABOUT
-    ========================================= -->
+    <!-- ABOUT -->
 
     <section id="about">
-
         <h2>
             About Me
         </h2>
 
         <p>
-
             I am a programmer passionate about building
             systems that solve real-world problems.
             I love learning new technologies and creating
             smart solutions.
-
         </p>
-
     </section>
 
-
-
-    <!-- =========================================
-         PROJECTS
-    ========================================= -->
+    <!-- PROJECTS -->
 
     <section id="projects">
-
         <h2>
             Projects
         </h2>
 
-
         <div class="projects-grid">
-
 
             <!-- PROJECT 1 -->
 
             <div class="project-card">
-
                 <h3>
                     TaskFlow AI
                 </h3>
 
                 <p>
-
                     Smart productivity assistant that
                     auto-organizes tasks and predicts what
                     needs attention first.
-
                 </p>
 
                 <a
@@ -939,25 +630,19 @@
                 >
                     View
                 </a>
-
             </div>
-
-
 
             <!-- PROJECT 2 -->
 
             <div class="project-card">
-
                 <h3>
                     HealthEcho
                 </h3>
 
                 <p>
-
                     Personal health dashboard that tracks
                     habits and provides weekly AI-powered
                     improvement tips.
-
                 </p>
 
                 <a
@@ -966,25 +651,19 @@
                 >
                     View
                 </a>
-
             </div>
-
-
 
             <!-- PROJECT 3 -->
 
             <div class="project-card">
-
                 <h3>
                     SkillForge Academy
                 </h3>
 
                 <p>
-
                     Micro-learning platform with short
                     lessons and AI-generated quizzes
                     for faster learning.
-
                 </p>
 
                 <a
@@ -993,29 +672,19 @@
                 >
                     View
                 </a>
-
             </div>
 
-
         </div>
-
     </section>
 
-
-
-    <!-- =========================================
-         SKILLS
-    ========================================= -->
+    <!-- SKILLS -->
 
     <section id="skills">
-
         <h2>
             Skills
         </h2>
 
-
         <ul>
-
             <li>
                 JavaScript
             </li>
@@ -1035,39 +704,25 @@
             <li>
                 Python
             </li>
-
         </ul>
-
     </section>
 
-
-
-    <!-- =========================================
-         CONTACT
-    ========================================= -->
+    <!-- CONTACT -->
 
     <section id="contact">
-
         <h2>
             Contact
         </h2>
 
-
         <p>
-
             Email:
 
-            <span
-                style="color: var(--primary);"
-            >
+            <span style="color: var(--primary);">
                 cabs.derrick20@gmail.com
             </span>
-
         </p>
 
-
         <p>
-
             GitHub:
 
             <a
@@ -1077,88 +732,15 @@
             >
                 github.com/JoedellDerrickCaballes
             </a>
-
         </p>
-
     </section>
 
-
-
-    <!-- =========================================
-         FOOTER
-    ========================================= -->
+    <!-- FOOTER -->
 
     <footer>
-
         © 2025 Joedell Derrick Caballes.
         All rights reserved.
-
     </footer>
-
-
-
-    <!-- =========================================
-         FLOWISE CHATBOT
-         STARTS CLOSED
-    ========================================= -->
-
-    <script type="module">
-
-        import Chatbot from
-        "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
-
-
-        Chatbot.init({
-
-            chatflowid:
-                "25189dcf-6ccb-4d2f-b8d3-431ea46e45af",
-
-            apiHost:
-                "https://cloud.flowiseai.com",
-
-
-            theme: {
-
-                button: {
-
-                    backgroundColor:
-                        "#3B81F6",
-
-                    right: 20,
-
-                    bottom: 20,
-
-                    size: 60,
-
-                    iconColor:
-                        "white",
-
-
-                    /* =========================
-                       CHATBOT CLOSED ON LOAD
-                    ========================= */
-
-                    autoWindowOpen: {
-
-                        autoOpen:
-                            false,
-
-                        openDelay:
-                            0,
-
-                        autoOpenOnMobile:
-                            false
-
-                    }
-
-                }
-
-            }
-
-        });
-
-    </script>
-
 
 </body>
 
